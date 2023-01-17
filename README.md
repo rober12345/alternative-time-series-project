@@ -58,7 +58,7 @@ Evaluate the performance
 
 **Step 6:**
 
-Run the actual prediction by using the most recent 100 observed data points being followed by the 60 predicted points.
+Run the actual prediction by using the most recent 100 observed data points followed by the 60 predicted points.
 
 **Step 7:**
 
