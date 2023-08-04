@@ -1,71 +1,54 @@
 <!-- hide -->
-# Alternative Time Series Project Tutorial
+# Time series
 <!-- endhide -->
 
-- This project will let you practice your new skills on dealing with time series forecasting, by creating a cpu usage anomaly detection model.
+- Understanding a new dataset.
+- Analyze the time series and study its characteristics.
+- Train a model to predict future memory expenditure.
 
 ## 🌱  How to start this project
 
-You will not be forking this time, please take some time to read this instructions:
+You will not be forking this time, please take some time to read these instructions:
 
 1. Create a new repository based on [machine learning project](https://github.com/4GeeksAcademy/machine-learning-python-template/generate) by [clicking here](https://github.com/4GeeksAcademy/machine-learning-python-template).
-2. Open the recently created repostiroy on Gitpod by using the [Gitpod button extension](https://www.gitpod.io/docs/browser-extension/).
-3. Once Gitpod VSCode has finished opening you start your project following the Instructions below.
+2. Open the newly created repository in Codespace using the [Codespace button extension](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository).
+3. Once the Codespace VSCode has finished opening, start your project by following the instructions below.
 
 ## 🚛 How to deliver this project
 
-Once you are finished creating your anomaly detection model, make sure to commit your changes, push to your repository and go to 4Geeks.com to upload the repository link.
+Once you are finished creating your linear regression model, make sure to commit your changes, push to your repository and go to 4Geeks.com to upload the repository link.
 
 ## 📝 Instructions
 
-**Anomaly detection on CPU usage**
+### System for detecting CPU usage anomalies
 
-Anomaly Detection means to identify unexpected events in a process. It means to detect threats to our systems that may cause harm in terms of security and leakage of important information, but the importance of Anomaly Detection is not limited to security. The data of this project is based on per-minute metrics of the host’s CPU utilization.
+We want to train a system that is able to predict what may be the CPU computational expenditure of a computer based on its historical data. To do this, we have captured some data for every minute several days to try to train a model.
 
-Dataset links:
+#### Step 1: Loading the dataset
 
-cpu-train-a: https://raw.githubusercontent.com/oreilly-mlsec/book-resources/master/chapter3/datasets/cpu-utilization/cpu-train-a.csv
+The dataset is already divided into training and test and can be found in this project folder under the names `cpu-train.csv` and `cpu-test.csv`. You can load them in the code directly from the links (`https://raw.githubusercontent.com/4GeeksAcademy/alternative-time-series-project/main/cpu-train.csv` and `https://raw.githubusercontent.com/4GeeksAcademy/alternative-time-series-project/main/cpu-test.csv`) or download it and add it by hand to your repository.
 
-cpu-train-b: https://raw.githubusercontent.com/oreilly-mlsec/book-resources/master/chapter3/datasets/cpu-utilization/cpu-train-b.csv
+#### Step 2: Construct and analyze the time serie
 
-cpu-test-a: https://raw.githubusercontent.com/oreilly-mlsec/book-resources/master/chapter3/datasets/cpu-utilization/cpu-test-a.csv
+Construct the valid data structure for the time serie, graph it, and then analyze it and answer the following questions:
 
-cpu-test-b: https://raw.githubusercontent.com/oreilly-mlsec/book-resources/master/chapter3/datasets/cpu-utilization/cpu-test-b.csv
+- Which is the tensor of the time serie?
+- Which is the trend?
+- Is it stationary?
+- Is there variability or noise?
 
-**Step 1:**
+> NOTE: A `tensor` in a time serie is the minimum unit of time for which there is data. It can be every second, minute, hour, day, week, month...
 
-In Machine Learning ARIMA model is generally a class of statistical models that give outputs which are linearly dependent on their previous values in the combination of stochastic factors.
+#### Step 3: Train an ARIMA
 
-We need to visualize the data to analyse the trends, seasonalities, and cycles.
+Use the training data to find the best parameterization of your ARIMA model.
 
-We'll start by importing necessary libraries.
+#### Step 4: Predict with the test set
 
-**Step 2:**
+Now use the trained model with the test set and compare the points with the real ones. Measure the performance of the time serie.
 
-Load the datasets.
+#### Step 5: Save the model
 
-**Step 3:**
+Store the model in the corresponding folder.
 
-Using matplotlib visualize the data.
-
-**Step 4:**
-
-Use the ARIMA model to fit the data.
-
-**Step 5:**
-
-Evaluate the performance
-
-**Step 6:**
-
-Run the actual prediction by using the most recent 100 observed data points followed by the 60 predicted points.
-
-**Step 7:**
-
-Let’s perform the same anomaly detection on another segment of the CPU utilization dataset captured at a different time by using the cpu-train-b
-
-Can you visualize any anomaly that occurs a short time after the training period?
-
-**Step 8:**
-
-Put your conclusions in the README file as a summary. And don't forget to create this model in your app.py file.
+> NOTA: Solution: https://github.com/4GeeksAcademy/alternative-time-series-project/blob/main/solution.ipynb

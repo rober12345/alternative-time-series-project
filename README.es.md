@@ -1,69 +1,54 @@
 <!-- hide -->
-# Tutorial de Proyecto de Series Temporales Alternativas
+# Series temporales
 <!-- endhide -->
 
-- Este proyecto le permitirá practicar sus nuevas habilidades para manejar el pronóstico de series de tiempo, mediante la creación de un modelo de detección de anomalías en el uso de la CPU.
+- Comprender un dataset nuevo.
+- Analizar la serie temporal y estudiar sus características.
+- Entrenar un modelo para predecir el gasto de memoria a futuro.
 
 ## 🌱  Cómo iniciar este proyecto
 
-1. Crea un nuevo repositorio basado en el [proyecto de machine learning](https://github.com/4GeeksAcademy/machine-learning-python-template/generate) haciendo [clic aquí](https://github.com/4GeeksAcademy/machine-learning-python-template).
-2. Abre el repositorio creado recientemente en Gitpod usando la [extensión del botón de Gitpod](https://www.gitpod.io/docs/browser-extension/).
-3. Una vez que Gitpod VSCode haya terminado de abrir, comienza tu proyecto siguiendo las instrucciones a continuación.
+Esta vez no se hará Fork, tómate un tiempo para leer estas instrucciones:
+
+1. Crear un nuevo repositorio basado en el [proyecto de Machine Learing](https://github.com/4GeeksAcademy/machine-learning-python-template/generate) [haciendo clic aquí](https://github.com/4GeeksAcademy/machine-learning-python-template).
+2. Abre el repositorio creado recientemente en Codespace usando la [extensión del botón de Codespace](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository).
+3. Una vez que el VSCode del Codespace haya terminado de abrirse, comienza tu proyecto siguiendo las instrucciones a continuación.
 
 ## 🚛 Cómo entregar este proyecto
 
-Una vez que hayas terminado de crear tu modelo de detección de anomalías, asegúrate de confirmar tus cambios, hazle push a tu repositorio y ve a 4Geeks.com para entregar y cargar el enlace de la aplicación web.
+Una vez que hayas terminado de resolver los ejercicios, asegúrate de confirmar tus cambios, hazle "push" al fork de tu repositorio y ve a 4Geeks.com para subir el enlace del repositorio.
 
-## 📝 Instrucciones 
+## 📝 Instrucciones
 
-**Detección de anomalías en el uso de la CPU**
+### Sistema de detección de anomalías en el uso de la CPU
 
-Detección de anomalías significa identificar eventos inesperados en un proceso. Significa detectar amenazas a nuestros sistemas que pueden causar daño en términos de seguridad y fuga de información importante, pero la importancia de la detección de anomalías no se limita a la seguridad. Los datos de este proyecto se basan en métricas por minuto de la utilización de la CPU del host.
+Queremos entrenar un sistema que sea capaz de predecir cuál puede ser el gasto computacional de la CPU de un ordenador en función de sus datos históricos. Para ello, hemos capturado algunos datos durante cada minuto varios días para tratar de entrenar un modelo.
 
-Enlaces de conjuntos de datos:
+#### Paso 1: Carga del conjunto de datos
 
-cpu-train-a: https://raw.githubusercontent.com/oreilly-mlsec/book-resources/master/chapter3/datasets/cpu-utilization/cpu-train-a.csv
+El conjunto de datos ya está dividido en entrenamiento y prueba y se puede encontrar en esta carpeta de proyecto bajo los nombre `cpu-train.csv` y `cpu-test.csv`. Puedes cargarlos en el código directamente desde los enlaces (`https://raw.githubusercontent.com/4GeeksAcademy/alternative-time-series-project/main/cpu-train.csv` y `https://raw.githubusercontent.com/4GeeksAcademy/alternative-time-series-project/main/cpu-test.csv`) o descargarlo y añadirlo a mano en tu repositorio.
 
-cpu-train-b: https://raw.githubusercontent.com/oreilly-mlsec/book-resources/master/chapter3/datasets/cpu-utilization/cpu-train-b.csv
+#### Paso 2: Construye y analiza la serie temporal
 
-cpu-test-a: https://raw.githubusercontent.com/oreilly-mlsec/book-resources/master/chapter3/datasets/cpu-utilization/cpu-test-a.csv
+Construye la estructura de datos válida para la serie temporal, grafícala y, a continuación, analízala y responde a las siguientes preguntas:
 
-cpu-test-b: https://raw.githubusercontent.com/oreilly-mlsec/book-resources/master/chapter3/datasets/cpu-utilization/cpu-test-b.csv
+- ¿Cuál es el tensor de la serie temporal?
+- ¿Cuál es la tendencia?
+- ¿Es estacionaria?
+- ¿Existe variabilidad o presencia de ruido?
 
-**Paso 1:**
+> NOTA: Un `tensor` en una serie temporal es la unidad de tiempo mínima para la cuál hay datos. Puede ser cada segundo, minuto, hora, día, semana, mes...
 
-En Machine Learning, el modelo ARIMA es generalmente una clase de modelos estadísticos que brindan resultados que dependen linealmente de sus valores anteriores en la combinación de factores estocásticos.
+#### Paso 3: Entrena un ARIMA
 
-Necesitamos visualizar los datos para analizar las tendencias, las estacionalidades y los ciclos.
+Utiliza los datos de entrenamiento para encontrar la mejor parametrización de tu modelo ARIMA.
 
-Comenzaremos importando las bibliotecas necesarias.
+#### Paso 4: Predice con el conjunto de test
 
-**Paso 2:**
+Ahora utiliza el modelo entrenado con el conjunto de prueba y compara los puntos con los reales. Mide el rendimiento de la serie temporal.
 
-Carga los conjuntos de datos.
+#### Paso 5: Guarda el modelo
 
-**Paso 3:**
+Almacena el modelo en la carpeta correspondiente.
 
-Usando matplotlib visualiza los datos.
-
-**Paso 4:**
-
-Utiliza el modelo ARIMA para ajustar los datos.
-
-**Paso 5:**
-
-Evalua el desempeño
-
-**Paso 6:**
-
-Ejecuta la predicción real utilizando los 100 puntos de datos observados más recientes seguidos de los 60 puntos predichos.
-
-**Paso 7:**
-
-Realicemos la misma detección de anomalías en otro segmento del conjunto de datos de uso de CPU capturado en un momento diferente mediante el uso de cpu-train-b
-
-¿Puedes visualizar alguna anomalía que ocurra poco tiempo después del período de entrenamiento?
-
-**Paso 8:**
-
-Pon sus conclusiones en el archivo README como resumen. Y no olvides crear este modelo en tu archivo app.py.
+> NOTA: Solución: https://github.com/4GeeksAcademy/alternative-time-series-project/blob/main/solution.ipynb
