@@ -50,3 +50,5 @@ Now use the trained model with the test set and compare the points with the real
 #### Step 5: Save the model
 
 Store the model in the corresponding folder.
+
+> NOTA: Solution: https://github.com/4GeeksAcademy/alternative-time-series-project/blob/main/solution.ipynb

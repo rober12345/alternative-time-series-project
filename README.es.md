@@ -50,3 +50,5 @@ Ahora utiliza el modelo entrenado con el conjunto de prueba y compara los puntos
 #### Paso 5: Guarda el modelo
 
 Almacena el modelo en la carpeta correspondiente.
+
+> NOTA: Solución: https://github.com/4GeeksAcademy/alternative-time-series-project/blob/main/solution.ipynb
