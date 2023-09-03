@@ -1,5 +1,5 @@
 <!-- hide -->
-# Time series
+# Time series - Step by step guide
 <!-- endhide -->
 
 - Understanding a new dataset.
@@ -8,7 +8,7 @@
 
 ## 🌱  How to start this project
 
-You will not be forking this time, please take some time to read these instructions:
+Follow the instructions below:
 
 1. Create a new repository based on [machine learning project](https://github.com/4GeeksAcademy/machine-learning-python-template/generate) by [clicking here](https://github.com/4GeeksAcademy/machine-learning-python-template).
 2. Open the newly created repository in Codespace using the [Codespace button extension](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository).
@@ -16,17 +16,17 @@ You will not be forking this time, please take some time to read these instructi
 
 ## 🚛 How to deliver this project
 
-Once you are finished creating your linear regression model, make sure to commit your changes, push to your repository and go to 4Geeks.com to upload the repository link.
+Once you have finished solving the exercises, be sure to commit your changes, push to your repository and go to 4Geeks.com to upload the repository link.
 
 ## 📝 Instructions
 
-### System for detecting CPU usage anomalies
+### Sales forecasting system
 
-We want to train a system that is able to predict what may be the CPU computational expenditure of a computer based on its historical data. To do this, we have captured some data for every minute several days to try to train a model.
+We want to set up our company's warehouse in another location and we need to estimate the rate of sales, which has been increasing since the company's creation, for the next few months in order to provide the space we will need.
 
 #### Step 1: Loading the dataset
 
-The dataset is already divided into training and test and can be found in this project folder under the names `cpu-train.csv` and `cpu-test.csv`. You can load them in the code directly from the links (`https://raw.githubusercontent.com/4GeeksAcademy/alternative-time-series-project/main/cpu-train.csv` and `https://raw.githubusercontent.com/4GeeksAcademy/alternative-time-series-project/main/cpu-test.csv`) or download it and add it by hand to your repository.
+The dataset can be found in this project folder under the name `sales.csv`. You can load it into the code directly from the link (`https://raw.githubusercontent.com/4GeeksAcademy/alternative-time-series-project/main/sales.csv`) or download it and add it by hand in your repository.
 
 #### Step 2: Construct and analyze the time serie
 
