@@ -10,5 +10,5 @@
 	"syntax": "python",
 	"duration" : 2,
     "projectType": "project",
-	"description" : "Use ARIMA model o create a cpu usage anomaly detection model."
+	"description" : "Use ARIMA model to forecast sales using time series analysis to estimate future sales rate."
 }
