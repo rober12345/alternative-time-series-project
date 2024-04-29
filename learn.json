@@ -2,7 +2,7 @@
 	"slug" : "alternative-time-series-project",
 	"title" : "Alternative time series project",
 	"preview": "https://github.com/4GeeksAcademy/alternative-time-series-project/blob/main/preview.png?raw=true",
-	"solution": "https://github.com/4GeeksAcademy/alternative-time-series-project/blob/main/solution_guide.ipynb",
+	"solution": "https://github.com/4GeeksAcademy/alternative-time-series-project/blob/main/solution.ipynb",
 	"status": "published",
 	"translations": ["us"],
 	"technologies": ["data-science", "machine-learning"],
